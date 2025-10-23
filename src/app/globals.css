@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  body {
+    font-family: sans-serif;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  article {
+    @apply my-8 max-w-4xl px-4 mx-auto;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  h1 {
+    @apply leading-tight border-b text-3xl font-semibold mb-2;
+  }
+
+  h2 {
+    @apply leading-tight text-2xl font-semibold mb-2;
+  }
+
+  .markdown ul {
+    @apply list-disc list-inside mb-2 pl-4;
+  }
+
+  .markdown ol {
+    @apply list-decimal list-inside mb-2 pl-4;
+  }
+
+  .markdown li {
+    @apply mb-1;
+  }
+
+  p {
+    @apply mb-2;
+  }
+
+  .markdown code {
+    @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+  }
+
+  .markdown pre {
+    @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto my-4;
+  }
+
+  .markdown pre code {
+    @apply bg-transparent p-0;
+  }
+
+  a {
+    @apply text-blue-600 hover:underline;
+  }
 }
+

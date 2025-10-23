@@ -10,7 +10,7 @@ interface Article {
   lastModified: string;
 }
 
-function getRecentArticles(): Article[] {
+function getArticles(): Article[] {
   const postsDir = path.join(process.cwd(), 'src/pages');
   const files = fs.readdirSync(postsDir);
 
@@ -33,22 +33,18 @@ function getRecentArticles(): Article[] {
         return new Date(b.date).getTime() - new Date(a.date).getTime();
       }
       return 0;
-    })
-    .slice(0, 3);
+    });
 
   return articles;
 }
 
-export default function Home() {
-  const recentArticles = getRecentArticles();
+export default function ArticlePage() {
+  const articles = getArticles();
 
   return (
-    <article>
-      <h1 className="leading-tight border-b text-3xl font-semibold mb-2">About</h1>
-      <p><a href="https://github.com/lev635">私</a>の個人ブログです。</p>
-      <p>詳しくは<a href="/readme">README</a>にて。</p>
-      <h1 className="leading-tight border-b text-3xl font-semibold mb-2 mt-8">新着記事</h1>
-      <ArticleList articles={recentArticles} displayButton={false} />
+    <article className="my-8">
+      <h1 className="text-3xl font-bold mb-6">記事一覧</h1>
+      <ArticleList articles={articles} />
     </article>
   );
 }
