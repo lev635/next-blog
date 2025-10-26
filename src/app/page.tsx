@@ -11,7 +11,7 @@ interface Article {
 }
 
 function getRecentArticles(): Article[] {
-  const postsDir = path.join(process.cwd(), 'src/pages');
+  const postsDir = path.join(process.cwd(), 'src/posts');
   const files = fs.readdirSync(postsDir);
 
   const articles = files

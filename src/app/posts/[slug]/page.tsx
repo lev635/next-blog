@@ -14,7 +14,7 @@ interface Params {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const postsDir = path.join(process.cwd(), 'src/pages');
+  const postsDir = path.join(process.cwd(), 'src/posts');
   const files = fs.readdirSync(postsDir);
 
   return files
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 function getPostBySlug(slug: string) {
-  const postsDir = path.join(process.cwd(), 'src/pages');
+  const postsDir = path.join(process.cwd(), 'src/posts');
   const filePath = path.join(postsDir, `${slug}.md`);
 
   if (!fs.existsSync(filePath)) {
