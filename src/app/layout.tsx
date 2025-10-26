@@ -8,6 +8,12 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "ゆかりの日記",
   description: "ゆかりの日記",
+  openGraph: {
+    title: "ゆかりの日記",
+    description: "ゆかりの日記",
+    images: ["/ogp.png"],
+  },
+  icons: "/favicon.png",
 };
 
 export default function RootLayout({

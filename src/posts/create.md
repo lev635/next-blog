@@ -26,7 +26,7 @@ lastModified: "2025-06-29"
 少し待つとプロジェクトが作成される。以下、作成されたディレクトリで作業をする。
 ### 動作確認
 `npm run dev` を実行し、適当なポート番号（デフォルトだと `http://localhost:4321`。以下デフォルトに準拠）に接続すると、以下のような画面が表示される。
-![image](../../assets/001/image1.png)
+![image](/assets/create/image1.png)
 ## Markdownを配置
 `src/pages` に `sample.md` なるファイルを作成し、好きな文字列を入力する。
 ```markdown
@@ -36,7 +36,7 @@ lastModified: "2025-06-29"
 本文
 ```
 `http://localhost:4321/sample` にアクセスすると、願いが叶ったことが確認できる。
-![image](../../assets/001/image2.png)
+![image](/assets/create/image2.png)
 Next.js などで同じことをしようとするとかなりの手間がかかるが、Astro の場合 Markdown を適当な場所に配置するだけで事足りる。これが今回 Astro を採用した理由である。
 ## デプロイ
 [公式のガイド](https://docs.astro.build/ja/guides/deploy/) に従って所望のサービスにデプロイする。
