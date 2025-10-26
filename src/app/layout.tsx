@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://potato-attack.vercel.app/"),
   title: "ゆかりの日記",
   description: "ゆかりの日記",
   openGraph: {
