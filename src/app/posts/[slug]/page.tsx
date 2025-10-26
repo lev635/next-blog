@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import rehypeSpotifyEmbed from '@/utils/rehypeSpotifyEmbed';
+import rehypeYoutubeEmbed from '@/utils/rehypeYoutubeEmbed';
 
 interface Params {
   slug: string;
@@ -61,7 +62,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       <div className="prose markdown">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeSpotifyEmbed, rehypeRaw]}
+          rehypePlugins={[rehypeSpotifyEmbed, rehypeYoutubeEmbed, rehypeRaw]}
         >
           {post.content}
         </ReactMarkdown>

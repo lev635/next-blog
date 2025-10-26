@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Layout.astro
 title: "rehypeプラグインによるリンクの自動展開"
 date: "2025-07-07"
 lastModified: "2025-07-07"

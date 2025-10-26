@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Layout.astro
 title: "記事一覧ページの作成"
 date: "2025-07-09"
 lastModified: "2025-07-09"

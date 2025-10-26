@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Layout.astro
 title: "Astroを使ってMarkdownでブログを書く"
 date: "2025-06-29"
 lastModified: "2025-06-29"
