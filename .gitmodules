@@ -1,3 +1,3 @@
 [submodule "blog-content"]
 	path = blog-content
-	url = https://${GITHUB_PRIVATE_TOKEN}@github.com/lev635/blog-content.git
+	url = https://github.com/lev635/blog-content.git
