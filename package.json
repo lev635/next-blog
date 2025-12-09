@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare-assets": "rm -rf public/assets && ln -s ../blog-content/assets public/assets",
-    "dev": "npm run prepare-assets && next dev --turbopack",
-    "build": "npm run prepare-assets && next build --turbopack",
+    "copy-assets": "rm -rf public/assets && mkdir -p public/assets && cp -r blog-content/assets/. public/assets",
+    "dev": "npm run copy-assets && next dev --turbopack",
+    "build": "npm run copy-assets && next build --turbopack",
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write"
