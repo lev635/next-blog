@@ -10,15 +10,16 @@ interface Article {
   lastModified: string;
 }
 
-function getArticles(): Article[] {
-  const postsDir = path.join(process.cwd(), 'src/posts');
+function getAllArticles(): Article[] {
+  const postsDir = path.join(process.cwd(), 'blog-content/posts');
   const files = fs.readdirSync(postsDir);
 
   const articles = files
     .filter((fileName) => fileName.endsWith('.md'))
     .map((fileName) => {
       const slug = fileName.replace(/\.md$/, '');
-      const fileContent = fs.readFileSync(path.join(postsDir, fileName), 'utf-8');
+      const filePath = path.join(postsDir, fileName);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
       const { data } = matter(fileContent);
 
       return {
@@ -38,13 +39,13 @@ function getArticles(): Article[] {
   return articles;
 }
 
-export default function ArticlePage() {
-  const articles = getArticles();
+export default function Article() {
+  const allArticles = getAllArticles();
 
   return (
-    <article className="my-8">
-      <h1 className="text-3xl font-bold mb-6">記事一覧</h1>
-      <ArticleList articles={articles} />
+    <article>
+      <h1 className="leading-tight border-b text-3xl font-semibold mb-2">記事一覧</h1>
+      <ArticleList articles={allArticles} displayButton={true} />
     </article>
   );
 }

@@ -1,0 +1,3 @@
+[submodule "blog-content"]
+	path = blog-content
+	url = https://github.com/lev635/blog-content.git
