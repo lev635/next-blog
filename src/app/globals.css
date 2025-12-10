@@ -11,8 +11,8 @@
 }
 
 @layer components {
-  .makrdown h1 {
-    @apply leading-tight border-b text-3xl font-semibold mb-2;
+  .markdown h1 {
+    @apply leading-tight border-b text-3xl font-semibold mb-4;
   }
 
   .markdown h2 {
