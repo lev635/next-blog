@@ -44,7 +44,7 @@ export default function Article() {
 
   return (
     <article>
-      <h1 className="leading-tight border-b text-3xl font-semibold mb-2">記事一覧</h1>
+      <h1>記事一覧</h1>
       <ArticleList articles={allArticles} displayButton={true} />
     </article>
   );

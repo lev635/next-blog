@@ -1,7 +1,7 @@
 
 export default function Footer() {
   return (
-    <footer className="flex">
+    <footer className="flex mt-8">
       <a href="https://github.com/lev635/next-blog" target="_blank" aria-label="GitHub">
         <img src="/assets/github-mark.svg" alt="GitHub" width="32" height="32" />
       </a>

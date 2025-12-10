@@ -6,28 +6,28 @@
   }
 
   article {
-    @apply my-8 max-w-4xl px-4 mx-auto;
+    @apply max-w-4xl px-4;
   }
 }
 
 @layer components {
   h1 {
-    @apply leading-tight border-b text-3xl font-semibold mb-2;
+    @apply leading-tight border-b text-3xl font-semibold mb-4;
   }
 
   h2 {
     @apply leading-tight text-2xl font-semibold mb-2;
   }
 
-  .markdown ul {
+  ul {
     @apply list-disc list-inside mb-2 pl-4;
   }
 
-  .markdown ol {
+  ol {
     @apply list-decimal list-inside mb-2 pl-4;
   }
 
-  .markdown li {
+  li {
     @apply mb-1;
   }
 
@@ -35,15 +35,15 @@
     @apply mb-2;
   }
 
-  .markdown code {
+  code {
     @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
   }
 
-  .markdown pre {
+  pre {
     @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto my-4;
   }
 
-  .markdown pre code {
+  pre code {
     @apply bg-transparent p-0;
   }
 
