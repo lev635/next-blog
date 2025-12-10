@@ -1,6 +1,9 @@
 'use client';
 
 import { useState } from "react";
+
+import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
+
 import ArticleCard from "./ArticleCard";
 
 export interface Article {
@@ -60,7 +63,7 @@ export default function ArticleList({ articles, displayButton = true }: Props) {
               className="px-2 py-2 rounded text-sm border border-[#333333] bg-white hover:bg-gray-100"
               onClick={() => setSortOrder((v) => (v === 'desc' ? 'asc' : 'desc'))}
             >
-              {sortOrder === 'desc' ? '↓' : '↑'}
+              {sortOrder === 'desc' ? <MdOutlineKeyboardArrowDown /> : <MdOutlineKeyboardArrowUp />}
             </button>
           </div>
           <div className="flex gap-2 items-center">
