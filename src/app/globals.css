@@ -6,16 +6,16 @@
   }
 
   article {
-    @apply my-8 max-w-4xl px-4 mx-auto;
+    @apply max-w-4xl px-4;
   }
 }
 
 @layer components {
-  h1 {
+  .makrdown h1 {
     @apply leading-tight border-b text-3xl font-semibold mb-2;
   }
 
-  h2 {
+  .markdown h2 {
     @apply leading-tight text-2xl font-semibold mb-2;
   }
 
@@ -31,7 +31,7 @@
     @apply mb-1;
   }
 
-  p {
+  .markdown p {
     @apply mb-2;
   }
 

@@ -44,11 +44,15 @@ export default function Home() {
 
   return (
     <article>
-      <h1 className="leading-tight border-b text-3xl font-semibold mb-2">About</h1>
-      <p><a href="https://github.com/lev635">私</a>の個人ブログです。</p>
-      <p>詳しくは<a href="/readme">README</a>にて。</p>
-      <h1 className="leading-tight border-b text-3xl font-semibold mb-2 mt-8">新着記事</h1>
-      <ArticleList articles={recentArticles} displayButton={false} />
+      <div className="mb-8">
+        <h1 className="leading-tight border-b text-3xl font-semibold mb-2">About</h1>
+        <p><a href="https://github.com/lev635">私</a>の個人ブログです。</p>
+        <p>詳しくは<a href="/readme">README</a>にて。</p>
+      </div>
+      <div className="mb-8">
+        <h1 className="leading-tight border-b text-3xl font-semibold mb-2">新着記事</h1>
+        <ArticleList articles={recentArticles} displayButton={false} />
+      </div>
     </article>
   );
 }
